@@ -38,7 +38,7 @@ public class BasicTest {
 
         assertFalse(prime(-1));
 
-        assertFalse(prime(1000000000));
+        assertFalse(prime(9223372036854775807L));
 
 
     }

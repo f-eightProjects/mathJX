@@ -78,7 +78,6 @@ public class Basic {
 
     public static boolean prime(int num) {
 
-
         if (num <= 1) {
             return false;
         }
@@ -87,24 +86,21 @@ public class Basic {
             return true;
         }
 
-        boolean isPrime = true;
+        if (num % 2 == 0) {
+            return false;
+        }
 
-        for (int i = 2; i < num; i++) {
+        for (int i = 3; i * i <= num; i+=2) {
             if(num % i == 0) {
-                isPrime = false;
-                break;
+             return false;
             }
         }
-        return isPrime;
+
+        return true;
     }
 
     public static boolean prime(long num) {
 
-        System.out.println("Fun Facts :-");
-        System.out.println("  1. Prime Numbers are +ve Integers greater than 1.");
-        System.out.println("  2. 2 is the only Even Prime Number.");
-        System.out.println("  3. Prime Numbers are divisible by 1 and the number itself.");
-
         if (num <= 1) {
             return false;
         }
@@ -113,15 +109,19 @@ public class Basic {
             return true;
         }
 
-        boolean isPrime = true;
+        if(num % 2 == 0) {
+            return false;
+        }
 
-        for (int i = 2; i < num; i++) {
+        for (long i = 3; i * i <= num; i+=2) {
             if(num % i == 0) {
-                isPrime = false;
-                break;
+                return false;
             }
         }
-        return isPrime;
+
+        return true;
     }
 
+    // Prime Number
+    // ----end------
 }
