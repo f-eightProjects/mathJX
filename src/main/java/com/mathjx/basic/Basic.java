@@ -76,22 +76,23 @@ public class Basic {
     // Face Value and Place Value
     // --- start ----
 
-//    public static int fpValue (int num) {
-//
-//
-//        int placeValue;
-//
-//        if (num == 0) {
-//            placeValue = num;
-//        }
-//
-//        while(num>0) {
-//            if()
-//        }
-//
-//        return placeValue;
-//
-//    }
+    public static int fpValue (int num, int digit) {
+
+        int placeValue = 0, proxyNum = num, i = 1;
+
+        if(num == 0) {
+            return 0;
+        } else {
+            while(proxyNum > 0) {
+                if(proxyNum % 10 == digit) {
+                    placeValue = digit * i;
+                }
+                i *= 10;
+                proxyNum /= 10;
+            }
+        }
+        return placeValue;
+    }
 
     // Prime Number
     // ---- start ------

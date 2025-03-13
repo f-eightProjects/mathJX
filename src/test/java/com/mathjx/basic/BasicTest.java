@@ -42,4 +42,9 @@ public class BasicTest {
 
 
     }
+
+    @Test
+    void fpValueTest() {
+        assertEquals(3, fpValue(12453, 3));
+    }
 }
