@@ -6,7 +6,6 @@ public class Basic {
     // ------- start ----
 
     public static int add(int a, int b) {
-
         return a + b;
     }
 
@@ -29,22 +28,18 @@ public class Basic {
     // ---- start ------
 
     public static int sub(int a, int b) {
-
         return a - b;
     }
 
     public static double sub(double a, double b) {
-
         return a - b;
     }
 
     public static float sub(float a, float b) {
-
         return a - b;
     }
 
     public static long sub(long a, long b) {
-
         return a - b;
     }
 
@@ -90,7 +85,7 @@ public class Basic {
             return false;
         }
 
-        for (int i = 3; i * i <= num; i+=2) {
+        for (int i = 3; i * i <= num; i += 2) {
             if(num % i == 0) {
              return false;
             }
@@ -113,7 +108,7 @@ public class Basic {
             return false;
         }
 
-        for (long i = 3; i * i <= num; i+=2) {
+        for (long i = 3; i * i <= num; i += 2) {
             if(num % i == 0) {
                 return false;
             }
@@ -124,4 +119,25 @@ public class Basic {
 
     // Prime Number
     // ----end------
+
+    // Face Value Place Value
+    // ---- start --------
+
+    public static int fpValue(int num, int digit) {
+
+        int placeValue = 0, proxyNum = num, i = 1;
+
+        if (num == 0) {
+            return 0;
+        } else {
+            while(proxyNum > 0) {
+                if(proxyNum % 10 == digit) {
+                    placeValue = digit * i;
+                }
+                i *= 10;
+                proxyNum /= 10;
+            }
+        }
+        return placeValue;
+    }
 }
