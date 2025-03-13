@@ -73,6 +73,26 @@ public class Basic {
     // Multiplication
     // ------ end -----
 
+    // Face Value and Place Value
+    // --- start ----
+
+//    public static int fpValue (int num) {
+//
+//
+//        int placeValue;
+//
+//        if (num == 0) {
+//            placeValue = num;
+//        }
+//
+//        while(num>0) {
+//            if()
+//        }
+//
+//        return placeValue;
+//
+//    }
+
     // Prime Number
     // ---- start ------
 
