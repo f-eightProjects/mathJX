@@ -11,14 +11,17 @@ public class Basic {
     }
 
     public static double add(double a, double b) {
+
         return a + b;
     }
 
     public static float add(float a, float b) {
+
         return a + b;
     }
 
     public static long add(long a, long b) {
+
         return a + b;
     }
 
@@ -55,18 +58,22 @@ public class Basic {
     // ------ start ------
 
     public static int mul(int a, int b) {
+
         return a * b;
     }
 
     public static double mul(double a, double b) {
+
         return a * b;
     }
 
     public static float mul(float a, float b) {
+
         return a * b;
     }
 
     public static long mul(long a, long b) {
+
         return a * b;
     }
 
@@ -76,12 +83,12 @@ public class Basic {
     // Face Value and Place Value
     // --- start ----
 
-    public static int fpValue (int num, int digit) {
+    public static String fpValue (int num, int digit) {
 
         int placeValue = 0, proxyNum = num, i = 1;
 
         if(num == 0) {
-            return 0;
+            return "0";
         } else {
             while(proxyNum > 0) {
                 if(proxyNum % 10 == digit) {
@@ -91,8 +98,11 @@ public class Basic {
                 proxyNum /= 10;
             }
         }
-        return placeValue;
+        return "Face Value: " + digit + ", " + "Place Value: " + placeValue;
     }
+
+    // Face Value Place Value
+    // -----end------
 
     // Prime Number
     // ---- start ------

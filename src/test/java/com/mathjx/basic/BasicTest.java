@@ -45,6 +45,6 @@ public class BasicTest {
 
     @Test
     void fpValueTest() {
-        assertEquals(3, fpValue(12453, 3));
+        assertEquals("Face Value: 0, Place Value: 0", fpValue(12045, 0));
     }
 }
