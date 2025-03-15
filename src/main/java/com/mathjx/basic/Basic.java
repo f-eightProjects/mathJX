@@ -80,6 +80,32 @@ public class Basic {
     // Multiplication
     // ------ end -----
 
+    // Division
+    // ------ start ------
+
+    public static int div(int a, int b) {
+
+        return a / b;
+    }
+
+    public static float div(float a, float b) {
+
+        return a / b;
+    }
+
+    public static double div(double a, double b) {
+
+        return a / b;
+    }
+
+    public static long div(long a, long b) {
+
+        return a / b;
+    }
+
+    // Division
+    // ---- end -----
+
     // Face Value and Place Value
     // --- start ----
 

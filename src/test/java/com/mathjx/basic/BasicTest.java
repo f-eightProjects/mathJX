@@ -25,7 +25,6 @@ public class BasicTest {
     @Test
     void primeTest() {
 
-
         assertFalse(prime(9));
 
         assertFalse(prime(10));
@@ -40,11 +39,18 @@ public class BasicTest {
 
         assertFalse(prime(9223372036854775807L));
 
-
     }
 
     @Test
     void fpValueTest() {
         assertEquals("Face Value: 0, Place Value: 0", fpValue(12045, 0));
+    }
+
+    @Test
+    void divTest() {
+
+        int a = 3;
+        int b = 9;
+        assertEquals(3, div(b,a));
     }
 }
