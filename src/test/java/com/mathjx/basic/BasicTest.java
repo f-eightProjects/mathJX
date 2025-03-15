@@ -53,4 +53,9 @@ public class BasicTest {
         int b = 9;
         assertEquals(3, div(b,a));
     }
+
+    @Test
+    void evenOddTest() {
+        assertEquals("Odd", evenOdd(17));
+    }
 }

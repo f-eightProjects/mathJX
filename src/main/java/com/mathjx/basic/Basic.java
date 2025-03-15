@@ -2,110 +2,6 @@ package com.mathjx.basic;
 
 public class Basic {
 
-    // Addition
-    // ------- start ----
-
-    public static int add(int a, int b) {
-
-        return a + b;
-    }
-
-    public static double add(double a, double b) {
-
-        return a + b;
-    }
-
-    public static float add(float a, float b) {
-
-        return a + b;
-    }
-
-    public static long add(long a, long b) {
-
-        return a + b;
-    }
-
-    // Addition
-    // ---- end ------------
-
-    // Subtraction
-    // ---- start ------
-
-    public static int sub(int a, int b) {
-
-        return a - b;
-    }
-
-    public static double sub(double a, double b) {
-
-        return a - b;
-    }
-
-    public static float sub(float a, float b) {
-
-        return a - b;
-    }
-
-    public static long sub(long a, long b) {
-
-        return a - b;
-    }
-
-    // Subtraction
-    // ----- end -------
-
-    // Multiplication
-    // ------ start ------
-
-    public static int mul(int a, int b) {
-
-        return a * b;
-    }
-
-    public static double mul(double a, double b) {
-
-        return a * b;
-    }
-
-    public static float mul(float a, float b) {
-
-        return a * b;
-    }
-
-    public static long mul(long a, long b) {
-
-        return a * b;
-    }
-
-    // Multiplication
-    // ------ end -----
-
-    // Division
-    // ------ start ------
-
-    public static int div(int a, int b) {
-
-        return a / b;
-    }
-
-    public static float div(float a, float b) {
-
-        return a / b;
-    }
-
-    public static double div(double a, double b) {
-
-        return a / b;
-    }
-
-    public static long div(long a, long b) {
-
-        return a / b;
-    }
-
-    // Division
-    // ---- end -----
-
     // Face Value and Place Value
     // --- start ----
 
@@ -181,4 +77,23 @@ public class Basic {
 
     // Prime Number
     // ----end------
+
+    // Even and Odd
+    // -- start ---
+
+    public static String evenOdd(int num) {
+        if(num == 0) {
+            return "Even";
+        }
+        if(num == 1) {
+            return "Odd";
+        }
+        if(num >= 2 && num % 2 == 0){
+            return "Even";
+        }
+        return "Odd";
+    }
+
+    // Even and Odd
+    // --- end -----
 }
