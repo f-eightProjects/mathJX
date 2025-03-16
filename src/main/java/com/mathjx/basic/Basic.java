@@ -1,5 +1,7 @@
 package com.mathjx.basic;
 
+import java.util.Arrays;
+
 public class Basic {
 
     // Face Value and Place Value
@@ -96,4 +98,26 @@ public class Basic {
 
     // Even and Odd
     // --- end -----
+
+    // Factor
+    // ----- start -----
+
+    public static int[] factor(int num) {
+        int[] a = new int[num];
+        int c = 0;
+        if (num == 0){
+            return new int[]{};
+        }
+        for(int i = 1; i <= num; i++) {
+            if(num % i == 0)
+            {
+                a[c++] = i;
+            }
+        }
+        // TODO
+        return Arrays.copyOf(a,c);
+    }
+
+    // Factor
+    // ------ end -----
 }
