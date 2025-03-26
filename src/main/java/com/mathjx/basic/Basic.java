@@ -114,10 +114,32 @@ public class Basic {
                 a[c++] = i;
             }
         }
-        // TODO
+        // Learn
         return Arrays.copyOf(a,c);
     }
 
     // Factor
     // ------ end -----
+
+    // Sieve of Eratosthenes
+    // ----- start ------
+
+    // Sieve of Eratosthenes
+    // -------- end --------
+
+    //TODO
+    // HCF LCM Multiples
+
+    public static int[] multiple(int num, int n) {
+        int[] a = new int[n];
+        int c = 0;
+        if(num == 0) {
+            return new int[]{};
+        }
+        for(int i = 1; i <= n; i++) {
+            a[c++] = num * i;
+        }
+        return Arrays.copyOf(a,c);
+    }
+
 }

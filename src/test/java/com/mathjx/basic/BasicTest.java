@@ -43,4 +43,10 @@ public class BasicTest {
         int[] expected = {};
         assertArrayEquals(expected, factor(0));
     }
+
+    @Test
+    void multipleTest() {
+        int[] expected = {3,6,9,12,15,18,21,24,27,30};
+        assertArrayEquals(expected, multiple(3,10));
+    }
 }
