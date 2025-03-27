@@ -49,4 +49,14 @@ public class BasicTest {
         int[] expected = {3,6,9,12,15,18,21,24,27,30};
         assertArrayEquals(expected, multiple(3,10));
     }
+
+    @Test
+    void squareRootTest() {
+        assertEquals(2.1, fracSqrt(441,100));
+    }
+
+    @Test
+    void cubeRootTest() {
+        assertEquals(1.639882997800068, fracCbrt(441,100));
+    }
 }

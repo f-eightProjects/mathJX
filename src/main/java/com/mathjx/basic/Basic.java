@@ -142,4 +142,31 @@ public class Basic {
         return Arrays.copyOf(a,c);
     }
 
+    // multiple
+    // ---- end ------
+
+    //square root
+    //------start-----
+
+    public static double sqRT(double num) {
+        return Math.sqrt(num);
+    }
+    public static double fracSqrt(double num1, double num2) {
+        return sqRT(num1) / sqRT(num2);
+    }
+
+    //square root
+    //-----end------
+
+    //cube root
+    //-----start-------
+
+    public static double cubeRT(double num) {
+        return Math.cbrt(num);
+    }
+
+    public static double fracCbrt(double num1, double num2) {
+        return cubeRT(num1) / cubeRT(num2);
+    }
+
 }
