@@ -74,4 +74,10 @@ public class BasicTest {
     void perDecTest() {
         assertEquals(20.0, perDec(40.0, 32.0));
     }
+
+    @Test
+    void simpleInterestTest() {
+        assertEquals("Simple Interest: 675.0, Amount: 3175.0", simpleInterest(2500, 1.5, 18));
+    }
+
 }

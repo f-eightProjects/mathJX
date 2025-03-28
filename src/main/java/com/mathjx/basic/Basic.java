@@ -195,4 +195,19 @@ public class Basic {
     //-----end----
 
 
+    //TODO
+    //profit and loss
+
+    //Simple Interest
+    //-----start------
+
+    public static String simpleInterest(double p, double r, double t) {
+        double si = (p * r * t) / 100;
+        return "Simple Interest: " + si + ", " + "Amount: " + (si + p);
+    }
+
+
+
+
+
 }
