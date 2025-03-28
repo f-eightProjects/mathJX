@@ -121,6 +121,7 @@ public class Basic {
     // Factor
     // ------ end -----
 
+    //TODO
     // Sieve of Eratosthenes
     // ----- start ------
 
@@ -168,5 +169,23 @@ public class Basic {
     public static double fracCbrt(double num1, double num2) {
         return cubeRT(num1) / cubeRT(num2);
     }
+
+    //cube root
+    //----end----
+
+    //TODO
+    // ratio
+
+    //percentage
+    //---start----
+    public static double percent(double per, double val) {
+        return per * val / 100;
+    }
+
+
+    public static double perInc(double initial, double afterIncrease) {
+        return ((afterIncrease - initial) / initial ) * 100.0;
+    }
+
 
 }

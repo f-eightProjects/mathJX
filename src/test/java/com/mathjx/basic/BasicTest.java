@@ -59,4 +59,14 @@ public class BasicTest {
     void cubeRootTest() {
         assertEquals(1.639882997800068, fracCbrt(441,100));
     }
+
+    @Test
+    void percentTest() {
+        assertEquals(125, percent(25,500));
+    }
+
+    @Test
+    void perIncTest() {
+        assertEquals(35, perInc(24.0, 32.40));
+    }
 }
