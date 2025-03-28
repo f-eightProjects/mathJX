@@ -69,4 +69,9 @@ public class BasicTest {
     void perIncTest() {
         assertEquals(35, perInc(24.0, 32.40));
     }
+
+    @Test
+    void perDecTest() {
+        assertEquals(20.0, perDec(40.0, 32.0));
+    }
 }

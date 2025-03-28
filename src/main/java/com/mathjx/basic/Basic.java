@@ -183,9 +183,16 @@ public class Basic {
     }
 
 
-    public static double perInc(double initial, double afterIncrease) {
-        return ((afterIncrease - initial) / initial ) * 100.0;
+    public static double perInc(double original, double afterIncrease) {
+        return ((afterIncrease - original) / original ) * 100.0;
     }
+
+    public static double perDec(double original, double afterDecrease) {
+        return ((original - afterDecrease) / original) * 100.0;
+    }
+
+    //percentage
+    //-----end----
 
 
 }
