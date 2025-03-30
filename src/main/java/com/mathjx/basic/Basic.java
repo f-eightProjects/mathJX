@@ -206,8 +206,4 @@ public class Basic {
         return "Simple Interest: " + si + ", " + "Amount: " + (si + p);
     }
 
-
-
-
-
 }
