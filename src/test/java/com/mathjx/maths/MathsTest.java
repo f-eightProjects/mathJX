@@ -1,11 +1,10 @@
-package com.mathjx.basic;
+package com.mathjx.maths;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import static com.mathjx.basic.Basic.*;
+import static com.mathjx.maths.Maths.*;
 
-public class BasicTest {
+public class MathsTest {
 
 
     @Test
@@ -52,7 +51,7 @@ public class BasicTest {
 
     @Test
     void squareRootTest() {
-        assertEquals(2.1, fracSqrt(441,100));
+        assertEquals(1.414214, sqRT(2, 6));
     }
 
     @Test

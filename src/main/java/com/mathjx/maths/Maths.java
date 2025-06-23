@@ -1,8 +1,8 @@
-package com.mathjx.basic;
+package com.mathjx.maths;
 
 import java.util.Arrays;
 
-public class Basic {
+public class Maths {
 
     // Face Value and Place Value
     // --- start ----
@@ -149,11 +149,19 @@ public class Basic {
     //square root
     //------start-----
 
-    public static double sqRT(double num) {
-        return Math.sqrt(num);
-    }
-    public static double fracSqrt(double num1, double num2) {
-        return sqRT(num1) / sqRT(num2);
+    public static double sqRT(double num, int precision) {
+        double total = 1 / Math.pow(10, precision);
+        double root;
+        double X = num;
+        while(true) {
+            root = 0.5 * (X + (num/X));
+            double ans = X - root;
+            if(Math.abs(ans) < total) {
+                break;
+            }
+            X = root;
+        }
+        return Math.round(root * Math.pow(10, precision)) / Math.pow(10, precision);
     }
 
     //square root
@@ -193,7 +201,6 @@ public class Basic {
 
     //percentage
     //-----end----
-
 
     //TODO
     //profit and loss
