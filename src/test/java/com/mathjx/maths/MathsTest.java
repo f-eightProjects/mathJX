@@ -28,7 +28,7 @@ public class MathsTest {
 
     @Test
     void fpValueTest() {
-        assertEquals("Face Value: 0, Place Value: 0", fpValue(12045, 0));
+        assertEquals("Face Value: 0, Place Value: 0", facePlaceValue(12045, 0));
     }
 
 
@@ -39,8 +39,8 @@ public class MathsTest {
 
     @Test
     void factorTest() {
-        int[] expected = {};
-        assertArrayEquals(expected, factor(0));
+        int[] expected = {1,2,3,6};
+        assertArrayEquals(expected, factor(6));
     }
 
     @Test
@@ -51,27 +51,22 @@ public class MathsTest {
 
     @Test
     void squareRootTest() {
-        assertEquals(1.414214, sqRT(2, 6));
-    }
-
-    @Test
-    void cubeRootTest() {
-        assertEquals(1.639882997800068, fracCbrt(441,100));
+        assertEquals(1.414214, squareRoot(2, 6));
     }
 
     @Test
     void percentTest() {
-        assertEquals(125, percent(25,500));
+        assertEquals(125, percentage(25,500));
     }
 
     @Test
     void perIncTest() {
-        assertEquals(35, perInc(24.0, 32.40));
+        assertEquals(35, percentageIncrease(0.0, 32.40));
     }
 
     @Test
     void perDecTest() {
-        assertEquals(20.0, perDec(40.0, 32.0));
+        assertEquals(20.0, percentageDecrease(40.0, 32.0));
     }
 
     @Test
@@ -79,4 +74,8 @@ public class MathsTest {
         assertEquals("Simple Interest: 675.0, Amount: 3175.0", simpleInterest(2500, 1.5, 18));
     }
 
+    @Test
+    void cubeRootTest() {
+        assertEquals(3.0, cubeRoot(27.0, 6));
+    }
 }
