@@ -1,28 +1,28 @@
-package com.mathjx.maths;
+package com.mathjx.maths.core;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import static com.mathjx.maths.Maths.*;
+import static com.mathjx.maths.core.Core.*;
 
-public class MathsTest {
+public class CoreTest {
 
 
     @Test
     void primeTest() {
 
-        assertFalse(prime(9));
+        assertFalse(isPrime(9));
 
-        assertFalse(prime(10));
+        assertFalse(isPrime(10));
 
-        assertTrue(prime(2));
+        assertTrue(isPrime(2));
 
-        assertFalse(prime(0));
+        assertFalse(isPrime(0));
 
-        assertFalse(prime(1));
+        assertFalse(isPrime(1));
 
-        assertFalse(prime(-1));
+        assertFalse(isPrime(-1));
 
-        assertFalse(prime(9223372036854775807L));
+        assertFalse(isPrime(9223372036854775807L));
 
     }
 
@@ -77,5 +77,15 @@ public class MathsTest {
     @Test
     void cubeRootTest() {
         assertEquals(3.0, cubeRoot(27.0, 6));
+    }
+
+    @Test
+    void powerTest() {
+        assertEquals(8.0, power(2,3));
+    }
+
+    @Test
+    void modTest() {
+        assertEquals(1.1, absoluteValue(-1.1));
     }
 }
