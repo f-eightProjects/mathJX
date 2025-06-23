@@ -88,4 +88,19 @@ public class CoreTest {
     void modTest() {
         assertEquals(1.1, absoluteValue(-1.1));
     }
+
+    @Test
+    void palTest() {
+        assertTrue(isPalindrome(121));
+    }
+
+    @Test
+    void armTest() {
+        assertTrue(isArmstrong(153));
+    }
+
+    @Test
+    void nivenTest() {
+        assertTrue(isNiven(62));
+    }
 }

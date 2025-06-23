@@ -332,4 +332,39 @@ public class Core {
         return num > 0 ? num : -num;
     }
 
+    public static boolean isPalindrome(long num) {
+        if(num <= 0) {
+            throw new IllegalArgumentException("Palindrome checks are only for positive natural integers");
+        }
+        long p = num;
+        long rev = 0;
+        while(p > 0) {
+            rev = rev * 10 + (p % 10);
+            p /= 10;
+        }
+        return num == rev;
+    }
+
+    public static boolean isArmstrong(long num) {
+        long a = num;
+        long s = 0;
+        while(a > 0) {
+            long r = a % 10;
+            s = s + (r * r * r);
+            a /= 10;
+        }
+        return num == s;
+    }
+
+    public static boolean isNiven(long num) {
+        long n = num;
+        long s = 0;
+        while(n > 0) {
+            long r = n % 10;
+            s += r;
+            n /= 10;
+        }
+        return num % s == 0;
+    }
+
 }
