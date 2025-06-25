@@ -4,6 +4,10 @@ import com.mathjx.maths.core.*;
 
 public class Maths {
 
+    private Maths() {
+        throw new IllegalArgumentException("Utility Class");
+    }
+
     public static String facePlaceValue(int num, int digit) {
         return Core.facePlaceValue(num, digit);
     }

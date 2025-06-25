@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static com.mathjx.maths.core.Core.*;
 
-public class CoreTest {
+class CoreTest {
 
 
     @Test
@@ -61,7 +61,7 @@ public class CoreTest {
 
     @Test
     void perIncTest() {
-        assertEquals(35, percentageIncrease(0.0, 32.40));
+        assertEquals(20.0, percentageIncrease(50.0, 60.0));
     }
 
     @Test
@@ -101,6 +101,11 @@ public class CoreTest {
 
     @Test
     void nivenTest() {
-        assertTrue(isNiven(62));
+        assertTrue(isNiven(666));
+    }
+
+    @Test
+    void perfectTest() {
+        assertTrue(isPerfect(6));
     }
 }

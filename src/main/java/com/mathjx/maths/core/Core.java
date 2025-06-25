@@ -1,6 +1,6 @@
 package com.mathjx.maths.core;
 
-public class Core {
+public final class Core {
 
     private Core() {
         throw new AssertionError("Cannot instantiate utility class");
@@ -13,7 +13,9 @@ public class Core {
      * @return string showing face and place value
      */
     public static String facePlaceValue(int num, int digit) {
-        int placeValue = 0, proxyNum = num, i = 1;
+        int placeValue = 0;
+        int proxyNum = num;
+        int i = 1;
         if(num == 0) {
             return "0";
         } else {
@@ -150,14 +152,14 @@ public class Core {
     public static double squareRoot(double num, int precision) {
         double total = 1 / Math.pow(10, precision);
         double root;
-        double X = num;
+        double x = num;
         while(true) {
-            root = 0.5 * (X + (num/X));
-            double ans = X - root;
+            root = 0.5 * (x + (num/x));
+            double ans = x - root;
             if(Math.abs(ans) < total) {
                 break;
             }
-            X = root;
+            x = root;
         }
         return Math.round(root * Math.pow(10, precision)) / Math.pow(10, precision);
     }
@@ -364,7 +366,27 @@ public class Core {
             s += r;
             n /= 10;
         }
+        if(s == 0) {
+            throw new IllegalArgumentException("s cannot be zero");
+        }
         return num % s == 0;
     }
+
+    public static boolean isPerfect(long num) {
+        if(num <= 1) {
+            return false;
+        }
+        long s = 1;
+        for(int i = 2; (long) i * i <= num; i++) {
+            if (num % i == 0) {
+                s += i;
+                if((long) i * i != num) {
+                    s += (num/i);
+                }
+            }
+        }
+        return s == num;
+    }
+
 
 }
