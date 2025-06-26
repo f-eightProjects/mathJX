@@ -3,7 +3,7 @@ package com.mathjx.maths.core;
 public final class Core {
 
     private Core() {
-        throw new AssertionError("Cannot instantiate utility class");
+        throw new AssertionError("Cannot Instantiate");
     }
 
     /**
@@ -387,6 +387,4 @@ public final class Core {
         }
         return s == num;
     }
-
-
 }
