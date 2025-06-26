@@ -1,8 +1,8 @@
 package com.mathjx.maths;
 
-import com.mathjx.maths.core.*;
+import com.mathjx.maths.core.Core;
 
-public class Maths {
+public final class Maths {
 
     private Maths() {
         throw new IllegalArgumentException("Utility Class");

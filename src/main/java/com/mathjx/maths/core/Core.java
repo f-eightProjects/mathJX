@@ -1,7 +1,28 @@
 package com.mathjx.maths.core;
 
+
+/**
+ * The {@code Core} class provides core mathematical utility constants and functions
+ * for the MathJX mathematics library.
+ * <p>
+ * This is a utility class that contains static constants and methods only.
+ * It cannot be instantiated and is declared {@code final} to prevent subclassing.
+ * </p>
+ */
 public final class Core {
 
+    private static final int DECIMAL_BASE = 10;
+
+    /**
+     * Private constructor to prevent instantiation of this utility class.
+     * <p>
+     * This constructor will never be invoked normally. It is provided as a
+     * safeguard against accidental instantiation within the class itself
+     * (e.g., through reflection).
+     * </p>
+     *
+     * @throws AssertionError always, to indicate that this class cannot be instantiated
+     */
     private Core() {
         throw new AssertionError("Cannot Instantiate");
     }
@@ -12,19 +33,19 @@ public final class Core {
      * @param digit the digit whose values are to be found
      * @return string showing face and place value
      */
-    public static String facePlaceValue(int num, int digit) {
+    public static String facePlaceValue(final int num, final int digit) {
         int placeValue = 0;
         int proxyNum = num;
         int i = 1;
-        if(num == 0) {
+        if (num == 0) {
             return "0";
         } else {
-            while(proxyNum > 0) {
-                if(proxyNum % 10 == digit) {
+            while (proxyNum > 0) {
+                if (proxyNum % DECIMAL_BASE == digit) {
                     placeValue = digit * i;
                 }
-                i *= 10;
-                proxyNum /= 10;
+                i *= DECIMAL_BASE;
+                proxyNum /= DECIMAL_BASE;
             }
         }
         return "Face Value: " + digit + ", " + "Place Value: " + placeValue;
@@ -35,7 +56,7 @@ public final class Core {
      * @param num (int) the number to be checked if it is prime or not.
      * @return true or false.
      */
-    public static boolean isPrime(int num) {
+    public static boolean isPrime(final int num) {
         if (num <= 1) {
             return false;
         }
@@ -45,7 +66,7 @@ public final class Core {
         if (num % 2 == 0) {
             return false;
         }
-        for (int i = 3; i * i <= num; i+=2) {
+        for (int i = 3; i * i <= num; i += 2) {
             if(num % i == 0) {
              return false;
             }
@@ -154,7 +175,7 @@ public final class Core {
         double root;
         double x = num;
         while(true) {
-            root = 0.5 * (x + (num/x));
+            root = 0.5 * (x + (num / x));
             double ans = x - root;
             if(Math.abs(ans) < total) {
                 break;
