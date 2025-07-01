@@ -2,6 +2,8 @@ package com.mathjx.maths;
 
 import com.mathjx.maths.core.Core;
 
+import com.mathjx.maths.geometry.Geometry;
+
 public final class Maths {
 
     private Maths() {
@@ -62,5 +64,13 @@ public final class Maths {
 
     public static String simpleInterest(double p, double r, double t) {
         return Core.simpleInterest(p,r,t);
+    }
+
+    public static String circle(double radius) {
+        return Geometry.circle(radius);
+    }
+
+    public static String rectangle(double length, double breadth) {
+        return Geometry.rectangle(length, breadth);
     }
 }
