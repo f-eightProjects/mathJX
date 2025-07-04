@@ -1,5 +1,7 @@
 package com.mathjx.maths.geometry;
 
+import com.mathjx.maths.core.Core;
+
 import static com.mathjx.maths.core.Core.power;
 import static com.mathjx.maths.core.Core.squareRoot;
 
@@ -28,6 +30,18 @@ public class Geometry {
         throw new AssertionError("Cannot Instantiate");
     }
 
+    public static String square(double a) {
+        double area = a * a;
+        double perimeter = 4 * a;
+        double diagonal = a * Core.squareRoot(2.0,6);
+
+        return "Square: { " +
+                "Area: " + area +
+                "Perimeter: " + perimeter +
+                "Diagonal: " + diagonal +
+                "}";
+    }
+
     public static String circle(double radius) {
         double diameter = 2 * radius;
         double circumference =  PI * diameter;
@@ -52,4 +66,35 @@ public class Geometry {
                 "Diagonal: " + diagonal +
                 "}";
     }
+
+    public static String triangle(double base, double height) {
+        double area = 0.5 * base * height;
+        return "Triangle: {" +
+                "Area: " + area +
+                "}";
+    }
+
+    public static String herons(double ab, double bc, double ca) {
+        double perimeter = ab + bc + ca;
+        double s = perimeter / 2;
+        double area = Core.squareRoot(s * ((s - ab) * (s - bc) * (s - ca)), 6);
+
+        return "Triangle: Herons {" +
+                "Perimeter: " + perimeter +
+                "Area: " + area +
+                "}";
+    }
+
+    public static String cube(double a) {
+        double volume = a * a * a;
+        double surfaceArea = 6 * a * a;
+        double diagonal = a * Core.cubeRoot(3.0,6);
+
+        return "Cube : { " +
+                "Volume: " + volume +
+                "Surface Area: " + surfaceArea +
+                "Diagonal: " + diagonal +
+                "}";
+    }
+
 }
