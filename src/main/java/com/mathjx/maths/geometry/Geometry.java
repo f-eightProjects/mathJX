@@ -112,10 +112,12 @@ public class Geometry {
     public static String cuboid(double l, double w, double h) {
         double volume = l * w * h;
         double surfaceArea = 2 * (l * w + w * h + h * l);
+        double perimeter = 4 * (l + w + h);
 
         return "Cuboid: {" +
                 "Volume: " + volume +
                 "Surface Area: " + surfaceArea +
+                "Perimeter: " + perimeter +
                 "}";
     }
 
