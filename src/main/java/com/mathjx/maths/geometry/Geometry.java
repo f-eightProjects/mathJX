@@ -85,6 +85,18 @@ public class Geometry {
                 "}";
     }
 
+    public static String equilateral(double a) {
+        double perimeter = 3 * a;
+        double height = (a * Core.squareRoot(3, 6)) / 2;
+        double area = (Core.squareRoot(3, 6) / 4) * (a * a);
+
+        return "Equilateral Triangle: {" +
+                "Perimeter: " + perimeter +
+                "Height: " + height +
+                "Area: " + area +
+                "}";
+    }
+
     public static String cube(double a) {
         double volume = a * a * a;
         double surfaceArea = 6 * a * a;
@@ -94,6 +106,16 @@ public class Geometry {
                 "Volume: " + volume +
                 "Surface Area: " + surfaceArea +
                 "Diagonal: " + diagonal +
+                "}";
+    }
+
+    public static String cuboid(double l, double w, double h) {
+        double volume = l * w * h;
+        double surfaceArea = 2 * (l * w + w * h + h * l);
+
+        return "Cuboid: {" +
+                "Volume: " + volume +
+                "Surface Area: " + surfaceArea +
                 "}";
     }
 
